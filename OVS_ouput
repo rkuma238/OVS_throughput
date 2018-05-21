@@ -1,0 +1,25 @@
+root@testnode1:~# ovs-ofctl dump-ports-desc br-int . --->script is
+written based on the internet o/p.Change the command if the command is
+different or o/p is bit different.
+OFPST_PORT_DESC reply (xid=0x2):
+ 1(eth2): addr:78:e7:d1:24:73:85
+     config:     0
+     state:      0
+     current:    10GB-FD FIBER
+     advertised: 10GB-FD FIBER
+     supported:  10GB-FD FIBER
+     speed: 10000 Mbps now, 10000 Mbps max
+
+
+root@testnode1:~# ovs-ofctl dump-ports brbm
+OFPST_PORT reply (xid=0x2): 3 ports
+  port  5: rx pkts=6071934, bytes=37086750067, drop=0, errs=0,
+frame=0, over=0, crc=0
+       tx pkts=6888905, bytes=626021363, drop=0, errs=0, coll=0
+  port  1: rx pkts=32317009, bytes=32290813174, drop=0, errs=0,
+frame=0, over=0, crc=0
+       tx pkts=25212056, bytes=83553302356, drop=0, errs=0, coll=0
+  port LOCAL: rx pkts=12293904, bytes=1780442549, drop=0, errs=0,
+frame=0, over=0, crc=0
+       tx pkts=24816664, bytes=31363410668, drop=0, errs=0, coll=0
+
